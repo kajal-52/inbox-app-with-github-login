@@ -1,24 +1,28 @@
 spring:
   profiles:
     active: local
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
 
 ---
 spring:
   profiles: local
   application:
     name: inbox-app
-    security:
-      oauth2:
-        client:
-          registration:
-            github:
-              client-id:
-              client-secret:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv1.0ea0dfa4b2ad2005
+            client-secret: f5a8ec3a97713e980f21eafbe2a2e3ba41d90b85
   data:
     cassandra:
        keyspace-name: main
-       username:
-       password:
+       username: WlIxwnzoTzkllkmSaQBemZlZ
+       password: FsSfJ3i6wnS7YtJ3LQDyjR+_4GdS9zLds_UtkB3.720BHbTGMZhxwkglLavELMwb4HF096Mp01P,z6xm5_TrimvpLkFo-px-k-BwW6ljfWF5uFC18nRjF0bxW+L2J8jN
        schema-action: recreate-drop-unused
        request:
          timeout: 10s
@@ -33,7 +37,7 @@ astra.db:
   id: 80420d4d-aab7-4656-9eaf-71800f30ce88-1
   region: asia-south1
   keyspace: main
-  application.token:
+  application.token: AstraCS:WlIxwnzoTzkllkmSaQBemZlZ:45f4826dd502d4f3e4e6413a3a3680e1b1b1de3162ff7d44ce919f8e59ba5ca1
 
 datastax.astra:
   secure-connect-bundle: secure-connect.zip
